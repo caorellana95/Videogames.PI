@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 // RUTA PRINCIPAL
 
 export function searchByName(name) {  
@@ -28,6 +29,14 @@ export function getGenres() {
     })
   };
 };
+
+// export function postVideogame(payload){
+//     return async function (dispatch) {
+//         const response = await axios.post(`https://api.rawg.io/api/games?key=${API_KEY}`, payload)
+//         console.log(response)
+//         return response
+//       }
+// }
 
 export function gameDetail(id) {
     return function (dispatch) {

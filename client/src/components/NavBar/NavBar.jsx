@@ -4,20 +4,16 @@ import { Link } from 'react-router-dom';
 
 // import './Navbar.css';
 
-export default function NavBar() {
+function NavBar() {
     return (
-        <header className="navbar">
-            <div>
-                {/* <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" /> */}
-            </div>
-            <nav>
-                <ul className="list">
-                    <li className="list-item">
-                        <Link exact to="/" >Home</Link>
-                        <Link to="/favs" >Favoritas</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <div className="navbar-div">
+        <Link to='/'><button>Home</button></Link>
+        <Link to='/videogame'><button>Videogame</button></Link>
+        <Link to='/crearjuego'><button>CrearJuego</button></Link>
+        <Link to='/sobre'><button>Sobre</button></Link>
+</div>
     )
 }
+
+
+export default NavBar;

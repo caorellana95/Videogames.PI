@@ -37,6 +37,7 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 filtered: action.payload
             }
+        
         case 'FILTER BY':
             return{
                 ...state,
