@@ -1,4 +1,4 @@
-import { GET_VIDEOGAMES, GET_GENRES, GET_DETAILS, SEARCH_BY_NAME, CREATE_VIDEOGAME, FILTER_BY_CREATION,FILTER_BY_GENRE, SORT_BY_RATING, SORT_BY_ALPHA,CLEAR_DETAIL } from '../actions'
+import { GET_VIDEOGAMES, GET_GENRES, GET_DETAILS, SEARCH_BY_NAME, CREATE_VIDEOGAME, FILTER_BY_CREATION,FILTER_BY_GENRE, SORT_BY_RATING, SORT_BY_AZ, CLEAR_DETAIL } from '../actions'
 
 const initialState = {
     videogames: [],
@@ -36,7 +36,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
     }
     case FILTER_BY_CREATION: 
-    const filteredByCreatyion =
+    const filteredByCreation =
         action.payload === 'all'
         ? state.videogamesFilter
         : action.payload === 'db'
@@ -48,7 +48,7 @@ const rootReducer = (state = initialState, action) => {
             );
     return {
         ...state,
-        videogames: filteredByCreatyion,
+        videogames: filteredByCreation,
     };
     case FILTER_BY_GENRE: 
     const videogames = state.videogamesFilter
@@ -84,8 +84,8 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         videogames: sortRating,
     }
-    case SORT_BY_ALPHA: 
-        let sortAlpha =
+    case SORT_BY_AZ: 
+        let sortAz =
         action.payload === 'ascending'
             ? state.videogames.sort((a, b) => {
                 if (a.name > b.name) return 1;
@@ -100,7 +100,7 @@ const rootReducer = (state = initialState, action) => {
 
         return {
         ...state,
-        videogames: sortAlpha,
+        videogames: sortAz,
     
     }
     case CLEAR_DETAIL: 

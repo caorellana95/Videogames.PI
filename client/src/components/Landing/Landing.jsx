@@ -5,7 +5,7 @@ export default function Landing(){
         <div className='Image'>
             <image className='Images' src=''alt=''/>
             <Link to="/home">
-                <h2>PI Cistobal Orellana Videogames</h2>
+                <h2>PI Cristobal Orellana Videogames</h2>
                 <button className='myButton'>Home</button>
             </Link>
         </div>
