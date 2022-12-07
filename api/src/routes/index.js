@@ -3,6 +3,7 @@ const { Router } = require('express');
 // Ejemplo: const authRouter = require('./auth.js');
 const videogames = require ('./videogames')
 const genres = require ('./genres')
+const videogame = require('/videogame')
 
 // accept-Encoding: null
 
@@ -10,6 +11,7 @@ const genres = require ('./genres')
 const router = Router();
 
 router.use('/videogames', videogames );
+router.use('/videogame', videogame );
 router.use('/genres', genres);
 
 

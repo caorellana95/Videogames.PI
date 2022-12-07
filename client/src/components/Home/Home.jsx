@@ -61,8 +61,9 @@ export default function Home() {
     }
 
     return (
-        <div>
-                <NavBar/>
+        <div className='home_container'>
+            <div className="sub_container">
+            <NavBar/>
                 <h1 className='titleHome'>Henry Videogame App</h1>
                 <div className="container_buttons">
                 <div className="search_bar" id="searchbar">
@@ -119,8 +120,9 @@ export default function Home() {
                     )})
                     }
                 </div>
+             </div>
                
-                </div>
+        </div>
                 
         
         

@@ -78,6 +78,7 @@ router.get('/', async(req, res) => {
 
 
 
+
 router.post('/', async(req, res) => {
     const {name, description, rating, released, genres, platforms, image} = req.body
     try {
@@ -97,6 +98,8 @@ router.post('/', async(req, res) => {
         
     }
 })
+
+
 
 
 module.exports = router;

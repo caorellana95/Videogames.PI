@@ -4,7 +4,7 @@
 // import { useDispatch, useSelector } from 'react-redux';
 
 
-// export default function CreateVideogame() {
+export default function CreateVideogame() {
 //     const dispatch = useDispatch()
 //     const genres = useSelector((state)=> state.genres)
 //     const historial = useHistory()
@@ -127,4 +127,4 @@
 //         errors.platforms = 'Platform is required';
 //         } 
 //     return errors;
-// }
+}
