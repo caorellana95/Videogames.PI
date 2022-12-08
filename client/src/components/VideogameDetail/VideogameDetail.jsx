@@ -26,7 +26,7 @@ export default function VideogameDetail() {
             <h5 className="rating">{detail.rating}</h5>
             <h5>Fecha de lanzamiento: {detail.released}</h5>
             <p>Descripción: {detail.description}</p>
-            <Link to="/videogames" className="link">
+            <Link to="/videogame/:id" className="link">
                 <button className="backDetail" onClick={(e)=> handleClick(e)}>Atrás</button>
             </Link>
         </div> 

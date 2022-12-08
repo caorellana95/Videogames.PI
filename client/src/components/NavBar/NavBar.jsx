@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import imagen from '../images/masterChiefHalo.jpg'
 import SearchBar from '../SearchBar/SearchBar';
-import css from '../NavBar/NavBar.module.css';
+import cs from '../NavBar/NavBar.module.css';
 import { useDispatch } from "react-redux";
 import { getVideogames } from "../../redux/actions";
 
@@ -15,16 +16,16 @@ function NavBar() {
         dispatch(getVideogames())
     }
     return (
-         <nav className={css.nav}>
-                <div className={css.busqueda}>
+         <nav className={cs.nav}>
+                <div className={cs.busqueda}>
                     <SearchBar />
                 </div>
-                {/* <div className={css.imagencita}>
-                    <img src={imagen} alt="mario.gif" className={css.gif}/>
+                {/* <div className={cs.imagen}>
+                    <img src={imagen} alt="master chief"/>
                 </div> */}
-                <div className={css.search}>
-                    <button className={css.btn}onClick={e => handleRefresh(e)}>Refresh</button>
-                    <span className={css.opcion}><NavLink to={'/create'} className={css.to}> Crear Videojuego</NavLink></span>
+                <div className={cs.search}>
+                    <button className={cs.btn}onClick={e => handleRefresh(e)}>Refresh </button>
+                    <span className={cs.opcion}><Link to={'/create'} className={cs.to}> Crear Videojuego</Link></span>
                 </div>
             </nav>
     )

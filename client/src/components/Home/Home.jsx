@@ -3,10 +3,10 @@ import Paginado from "../Paginado/Paginado";
 import { useDispatch, useSelector } from 'react-redux'
 import Card from '../Card/Card';
 import { Link } from 'react-router-dom';
-import SearchBar from '../SearchBar/SearchBar';
 import NavBar from '../NavBar/NavBar';
 import {filterByCreation, filterByGenre, sortByRating, sortByAz, getVideogames, getGenres} from "../../redux/actions";
 import { useState, useEffect } from "react";
+import cs from '../Home/Home.module.css'
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -32,10 +32,10 @@ export default function Home() {
         setPage(num)
     }
 
-    function handleClick(e){
-        e.preventDefault()
-        dispatch(getVideogames())
-    } 
+    // function handleClick(e){
+    //     e.preventDefault()
+    //     dispatch(getVideogames())
+    // } 
 
     function filterByCreationHandler(e){
         dispatch(filterByCreation(e.target.value))
@@ -61,35 +61,35 @@ export default function Home() {
     }
 
     return (
-        <div className='home_container'>
-            <div className="sub_container">
+        <div className={cs.home_container}>
+            
             <NavBar/>
-                <h1 className='titleHome'>Henry Videogame App</h1>
-                <div className="container_buttons">
-                <div className="search_bar" id="searchbar">
+                <h1 className={cs.titleHome}>Henry Videogame App</h1>
+                <div className={cs.container_buttons}>
+                {/* <div className="search_bar" id="searchbar">
                     <SearchBar/>
-                </div>
-                <button onClick={(e) => handleClick(e)}>Mostrar Juegos</button>
-                <button ><Link className="createLink" to="/create">Crear Juego</Link></button>
+                </div> */}
+                {/* <button onClick={(e) => handleClick(e)}>Mostrar Juegos</button>
+                <button ><Link className="createLink" to="/create">Crear Juego</Link></button> */}
                 </div>
                 <div className='filters'>
-                    <select className="selector" onChange={(e) => sortByRatingHandler(e)}>
+                    <select className={cs.selector} onChange={(e) => sortByRatingHandler(e)}>
                         <option value="rating">Ordenar por Rating</option>
                         <option value="ascendente">Ascendente</option>
                         <option value="descendente">Descendente</option>
                     </select>
-                    <select className="selector" onChange={(e) => sortByAzHandler(e)}>
+                    <select className={cs.selector} onChange={(e) => sortByAzHandler(e)}>
                         <option value="AZ">Orden Alfabético</option>
                         <option value="ascendente">A-Z</option>
                         <option value="descendente">Z-A</option>
                     </select>
-                    <select className="selector" onChange={(e) => filterByGenreHandler(e)}>
+                    <select className={cs.selector} onChange={(e) => filterByGenreHandler(e)}>
                         <option value="genre">Géneros</option>
                         {allGenres && allGenres.map((g) => {
                             return <option value={g.name} key={g.id}>{g.name}</option>
                         })}
                     </select>
-                    <select className="selector" onChange={(e) => filterByCreationHandler(e)}>
+                    <select className={cs.selector} onChange={(e) => filterByCreationHandler(e)}>
                         <option value="all">Videojuegos</option>
                         <option value="db">Creados</option>
                         <option value="api">Existentes</option>
@@ -103,7 +103,7 @@ export default function Home() {
                         
                     />
                 </div>
-                <div className="card_container">
+                <div className={cs.card_container}>
                     {paginaActualVideogames && paginaActualVideogames.map((v) => {
                         return (
                             <section className="card_home" key={v.id}>
@@ -120,7 +120,7 @@ export default function Home() {
                     )})
                     }
                 </div>
-             </div>
+            
                
         </div>
                 

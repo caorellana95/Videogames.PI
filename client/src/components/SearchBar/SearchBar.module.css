@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    height: 60px;
+    
+}
+
+
+.inputSearch{
+    height: 6vh;
+    width: 25vw;
+    font-family: "monospace";
+    background-color: #08365c;
+    color: rgb(170, 163, 163);
+    font-size: 16px;
+    border-radius: 30px;
+    margin: 20px;
+    display: block;
+    height: 20px;
+    
+    
+    
+    
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: rgba(5, 11, 16, 0.598);
+    margin-top: 40px;
+    font-size: 12px;
+    margin-bottom: 25px;
+    padding: 24px; 
+    color: aliceblue;
+    border: none;
+    
+}

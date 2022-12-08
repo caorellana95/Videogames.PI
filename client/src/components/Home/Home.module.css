@@ -1,0 +1,33 @@
+.home_container {
+  background-color: #352647;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+.titleHome {
+    font-family: 'Cooper Black', sans-serif;
+    align-items: center;
+    text-align: center;
+    color: #182ce0;
+}
+
+.selector{
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    margin-left: 20px;
+    width: 200px;
+    color: rgb(170, 163, 163);
+    background-color: #352647;;
+    background-position: center;
+    margin-left: 80px;
+    font-family: "Cooper Black";
+    
+    
+
+}
+

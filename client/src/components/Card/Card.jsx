@@ -9,7 +9,7 @@ export default function Card({name, genres, image, id}) {
         <div className={cs.card}>
             <h2>{name}</h2>
             <img src={image} alt={name} className='image'/>
-            <h4>Genre: {genre}</h4>
+            <h4>Genero: {genre}</h4>
         </div>
         
 
